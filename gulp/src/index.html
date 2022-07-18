@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Skip App</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./manifest.json" rel="manifest">
+    <link rel="shortcut icon" href="images/icon_x16.png" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <!-- build:css css/bundle.css -->
+    <link rel="stylesheet" href="css/normalise.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- endbuild -->
+    <!-- build:js js/bundle.js -->
+    <script src="js/index.js" defer></script>
+    <!-- endbuild -->
+
+</head>
+
+<body>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Map and add button -->
+    <div id="map"></div>
+    <button id="addButton">Add</button>
+
+    <!-- Add menu -->
+    <div id="addMenu">
+        <div id="addMenuContent">
+
+            <!-- Exit button -->
+            <div id="closeaddMenu">CLOSE</div>
+            <div id="addMenuBody">
+                <div>
+                    <!-- Image and description input -->
+                    <canvas id="canvas"></canvas>
+                    <br />
+                    <input type="file" accept="image/*" id="fileInput">
+                    <br />
+                    <br />
+                    <br />
+                    <label for="objDescription" class="inputLabel">Enter object description</label>
+                    <br />
+                    <textarea id="objDescription"></textarea>
+                    <br />
+                    <br />
+                    <br />
+                    <button id="submit" class="submitButton">ADD OBJECT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

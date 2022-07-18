@@ -1,0 +1,44 @@
+{
+    "name": "Skip App",
+    "short_name": "Skip App",
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "portrait",
+    "description": "A mobile-optimised progressive web application to share, map, and find materials and household goods found in skips or offered for free collection in the street.",
+    "icons": [{
+            "src": "images/icon_x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
