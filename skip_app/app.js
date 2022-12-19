@@ -16,6 +16,8 @@ database.loadDatabase();
 
    Delete is not currently used, but is present for future uses.
    ------------------------------------------------------------------------------------------------*/
+
+// TODO: In future, validate incoming data before writing it to the database.
 app.post('/skip_app', (request, response) => {
     const data = request.body;
     database.insert(data);
@@ -50,5 +52,5 @@ app.delete('/skip_app/:uid', (request, response) => {
    ------------------------------------------------------------------------------------------------*/
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Listening at port ${port}`);
+    console.log(`RUBBISH COLLECTION APPLICATION: Listening at port ${port}`);
 });

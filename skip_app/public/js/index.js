@@ -124,9 +124,11 @@ window.addEventListener('load', () => {
         document.querySelector("#addMenu").style.display = "none";
     });
 
-    /* Data function. This gets all data from the database and turn that into markers.
+    /* Data function. This gets all data from the database and turn the data into markers.
        ------------------------------------------------------------------------------------------------*/
     async function getData() {
+
+        // Fetch the data from the database.
         const response = await fetch('/skip_app');
         const data = await response.json();
 
