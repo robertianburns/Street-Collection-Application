@@ -7,9 +7,12 @@ const customIcons = {
     })
 };
 
+/* Fire the load event when the whole page has loaded, including all dependent resources such as
+   stylesheets, scripts, iframes, and images.
+   ------------------------------------------------------------------------------------------------*/
 window.addEventListener('load', () => {
 
-    /* Register the ServiceWorker when the page loads. */
+    // Register the ServiceWorker when the page loads.
     navigator.serviceWorker.register('./sw.js', { 'scope': './' });
 
     /* Initialise the map on load.
@@ -70,7 +73,8 @@ window.addEventListener('load', () => {
     const canvas = document.querySelector('#canvas');
     const canvasContext = canvas.getContext('2d');
 
-    document.querySelector('#fileInput').onchange = function(e) {
+    // Take the end user's inputted image.
+    document.querySelector('#fileInput').onchange = function(event) {
         const image = new Image();
         image.onload = imageDraw;
         image.onerror = imageError;
@@ -104,7 +108,7 @@ window.addEventListener('load', () => {
     submitButton.addEventListener('click', async event => {
         const imageURL = document.querySelector('#canvas').toDataURL();
         const objectDescription = document.querySelector('#objDescription').value;
-        const objectTaken = 0; // 0 = false (boolean)
+        const objectTaken = 0; // 0 = false for not taken (boolean)
         const data = { objectTaken, lat, lon, objectDescription, imageURL };
         const method = {
             method: 'POST',
@@ -124,9 +128,11 @@ window.addEventListener('load', () => {
         document.querySelector("#addMenu").style.display = "none";
     });
 
-    /* Data function. This gets all data from the database and turn that into markers.
+    /* Data function. This gets all data from the database and turn the data into markers.
        ------------------------------------------------------------------------------------------------*/
     async function getData() {
+
+        // Fetch the data from the database.
         const response = await fetch('/skip_app');
         const data = await response.json();
 

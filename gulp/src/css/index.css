@@ -63,7 +63,7 @@ input[type=file] {
 }
 
 #addMenu {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.555);
     display: none;
     height: 100%;
     overflow: auto;
@@ -74,9 +74,9 @@ input[type=file] {
 
 #addMenuContent {
     background-color: #fefefe;
-    border: 1px solid #888;
+    border: 1px solid rgb(39, 39, 39);
     margin: 5% auto;
-    width: 75%;
+    width: 40%;
 }
 
 #addMenuBody {
@@ -123,6 +123,9 @@ input[type=file] {
    ------------------------------------------------------------------------------------------------*/
 
 @media (max-width: 1200px) {
+    #addMenuContent {
+        width: 70%;
+    }
     #addMenuBody {
         font-size: 2rem;
         grid-template-columns: 1fr;
@@ -136,8 +139,11 @@ input[type=file] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     html {
         font-size: 0.9rem;
+    }
+    #addMenuContent {
+        width: 95%;
     }
 }

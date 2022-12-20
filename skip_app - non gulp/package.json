@@ -1,0 +1,16 @@
+{
+    "name": "skip_app",
+    "version": "1.0.0",
+    "description": "A mobile-optimised progressive web application to share, map, and find materials and household goods found in skips or offered for free collection in the street.",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Robert Burns",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nedb": "^1.8.0"
+    }
+}
